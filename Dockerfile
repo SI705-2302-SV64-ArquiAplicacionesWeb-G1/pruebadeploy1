@@ -1,4 +1,4 @@
-FROM openjdk:17.0.8
+FROM openjdk:17
 VOLUME /tmp
 EXPOSE 8080
 ARG JAR_FILE=target/WeRecycle-0.0.1-SNAPSHOT.jar
