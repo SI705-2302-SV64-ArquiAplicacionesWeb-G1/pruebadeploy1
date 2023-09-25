@@ -11,7 +11,7 @@
     <groupId>pe.edu.upc.aww</groupId>
     <artifactId>WeRecycle</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>WeRecycle</name>
     <description>WeRecycle</description>
     <properties>
