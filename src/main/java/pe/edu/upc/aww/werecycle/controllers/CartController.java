@@ -2,6 +2,7 @@ package pe.edu.upc.aww.werecycle.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aww.werecycle.dtos.CartDTO;
 import pe.edu.upc.aww.werecycle.entities.Cart;
@@ -16,6 +17,7 @@ public class CartController {
     @Autowired
     private ICartService cS;
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void registrar(@RequestBody CartDTO dto){
         ModelMapper m = new ModelMapper();
         Cart c = m.map(dto,Cart.class);
